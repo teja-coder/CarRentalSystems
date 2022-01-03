@@ -12,12 +12,12 @@ class car
     static int dzire,verna,indigo,innova,scorpio,fortuner,indica,i10,swift;
     void details()
     {
-        cout<<"Please Enter the customer details"<<endl;
-        cout<<"Enter your First name: "<<endl;
+        cout<<endl<<"Please Enter the customer details"<<endl;
+        cout<<"Enter your First name: ";
         cin>>fname;
-        cout<<"Enter your last name: "<<endl;
+        cout<<"Enter your last name: ";
         cin>>lname;
-        cout<<"Enter your contact: "<<endl;
+        cout<<"Enter your contact: ";
         cin>>contact;
     }
 };
@@ -31,6 +31,94 @@ int car::indica=1;
 int car::i10=2;
 int car::swift=3;
 
+class hatchback:public car
+{
+    public:
+    void get()
+    {
+        if(trent==0)
+        {
+            cout<<endl<<"Mileage provided by each car is as follows:"<<endl;
+            cout<<"INDICA=16 "<<endl<<"I10= 17"<<endl<<"SWIFT=20"<<endl;
+            cout<<endl<<"The cost details for each car is as follows:"<<endl;
+            cout<<"INNOVA=2800 Rs"<<endl<<"SCORPIO=3000 Rs"<<endl<<"FORTUNER=3500"<<endl;
+        }
+
+    }
+    void rent()
+    {
+        cout<<endl<<"If you want to rent a sedan car Then press Y for yes or N for no"<<endl;
+        cin>>ch;
+        if(ch=='n' ||ch=='N')
+        {
+            return;
+        }
+        else
+        {
+            details();
+            cout<<"Press 1 for INDICA,2 for I10,3 for SWIFT"<<endl;
+            cin>>n;
+            cout<<"Enter number of days"<<endl;
+            cin>>days;
+            switch(n)
+            {
+                case 1:
+                if(indica==0)
+                {
+                    cout<<"Sorry Out of Cars,Please go for another car"<<endl;
+                }
+                else
+                {
+                    tcar=7;
+                    trent=days*2800;
+                    indica--;
+                }
+                break;
+                case 2:
+                if(i10==0)
+                {
+                    cout<<"Sorry Out of Cars,Please go for another car"<<endl;
+                }
+                else
+                {
+                    tcar=8;
+                    trent=days*3000;
+                    i10--;
+                }
+                break;
+                case 3:
+                if(swift==0)
+                {
+                    cout<<"Sorry Out of Cars,Please go for another car"<<endl;
+                }
+                else
+                {
+                    tcar=9;
+                    trent=days*3500;
+                    swift--;
+                }
+                break;
+                default:cout<<"Invalid choice"<<endl;
+            }
+        }
+    }
+    void display()
+    {
+        cout<<"DETAILS OF HATCHBACK CARS"<<endl;
+        cout<<"INDICA"<<"\t"<<"I10"<<"\t"<<"SWIFT"<<endl<<endl;
+        int i;
+        cout<<"INDICA - ";
+        for(i=1;i<=indica;i++);
+        cout<<i<<endl;
+        cout<<"I10 - ";
+        for(i=1;i<=i10;i++);
+        cout<<i<<endl;
+        cout<<"SWIFT - ";
+        for(i=1;i<=swift;i++);
+        cout<<i<<endl;
+    }
+};
+
 class sedan:public car
 {
     public:
@@ -38,8 +126,7 @@ class sedan:public car
     {
         if(trent==0)
         {
-        cout<<"DZIRE"<<endl<<"VERNA"<<endl<<"INDIGO";
-        cout<<"Mileage provided by each car is as follows:"<<endl;
+        cout<<endl<<"Mileage provided by each car is as follows:"<<endl;
         cout<<"DZIRE=20 "<<endl<<"VERNA= 11"<<endl<<"INDIGO=15";
         cout<<"The cost details for each car is as follows:"<<endl;
         cout<<"DZIRE=3800 Rs"<<endl<<"Verna=3000 Rs"<<endl<<"INDIGO=3500";
@@ -49,6 +136,7 @@ class sedan:public car
     void rent()
     {
         cout<<"If you want to rent a sedan car Then press Y for yes or N for no"<<endl;
+        cin>>ch;
         if(ch=='n' ||ch=='N')
         {
             return;
@@ -73,6 +161,7 @@ class sedan:public car
                     trent=days*3800;
                     dzire--;
                 }
+                break;
                 case 2:
                 if(verna==0)
                 {
@@ -84,6 +173,7 @@ class sedan:public car
                     trent=days*3000;
                     verna--;
                 }
+                break;
                 case 3:
                 if(indigo==0)
                 {
@@ -95,32 +185,26 @@ class sedan:public car
                     trent=days*3500;
                     indigo--;
                 }
-                default:cout<<"Invalid choice"<<endl;
                 break;
+                default:cout<<"Invalid choice"<<endl;
             }
-
         }
     }
     void display()
-{
-cout<<"DETAILS OF SEDAN CARS"<<endl;
-
-for(int i=1;i<=dzire;i++)
-{
-   cout<<"DZIRE"<<endl;
-}
-for(int i=1;i<=verna;i++)
-{
-
-cout<<"VERNA"<<endl;
-}
-for(int i=1;i<=indigo;i++)
-{
-
-cout<<"INDIGO"<<endl;;
-}
-
-}
+    {
+        cout<<"DETAILS OF SEDAN CARS"<<endl;
+        cout<<"DZIRE"<<"\t"<<"VERNA"<<"\t"<<"INDIGO"<<endl<<endl;
+        int i;
+        cout<<"DZIRE - ";
+        for(i=1;i<=dzire;i++);
+        cout<<i<<endl;
+        cout<<"VERNA - ";
+        for(int i=1;i<=verna;i++);
+        cout<<i<<endl;
+        cout<<"INDIGO - ";
+        for(int i=1;i<=indigo;i++);
+        cout<<i<<endl;
+    }
 };
 class SUV:public car
 {
@@ -129,17 +213,17 @@ class SUV:public car
     {
         if(trent==0)
         {
-        cout<<"INNOVA"<<endl<<"SCORPIO"<<endl<<"FORTUNER";
-        cout<<"Mileage provided by each car is as follows:"<<endl;
-        cout<<"INNOVA=11 "<<endl<<"SCORPIO= 15"<<endl<<"FORTUNER=10";
-        cout<<"The cost details for each car is as follows:"<<endl;
-        cout<<"INNOVA=4800 Rs"<<endl<<"SCORPIO=5000 Rs"<<endl<<"FORTUNER=4500";
+            cout<<endl<<"Mileage provided by each car is as follows:"<<endl;
+            cout<<"INNOVA=11 "<<endl<<"SCORPIO= 15"<<endl<<"FORTUNER=10";
+            cout<<"The cost details for each car is as follows:"<<endl;
+            cout<<"INNOVA=4800 Rs"<<endl<<"SCORPIO=5000 Rs"<<endl<<"FORTUNER=4500";
         }
 
     }
     void rent()
     {
         cout<<"If you want to rent a sedan car Then press Y for yes or N for no"<<endl;
+        cin>>ch;
         if(ch=='n' ||ch=='N')
         {
             return;
@@ -164,6 +248,7 @@ class SUV:public car
                     trent=days*4800;
                     innova--;
                 }
+                break;
                 case 2:
                 if(scorpio==0)
                 {
@@ -175,6 +260,7 @@ class SUV:public car
                     trent=days*5000;
                     scorpio--;
                 }
+                break;
                 case 3:
                 if(fortuner==0)
                 {
@@ -186,143 +272,56 @@ class SUV:public car
                     trent=days*4500;
                     fortuner--;
                 }
-                default:cout<<"Invalid choice"<<endl;
                 break;
+                default:cout<<"Invalid choice"<<endl;
             }
         }
     }
 
-     void display()
-{
-cout<<"DETAILS OF SUV CARS"<<endl;
-
-for(int i=1;i<=innova;i++)
-{
-   cout<<"INNOVA"<<endl;
-}
-for(int i=1;i<=scorpio;i++)
-{
-
-cout<<"SCORPIO"<<endl;
-}
-for(int i=1;i<=fortuner;i++)
-{
-
-cout<<"FORTUNER"<<endl;;
-}
-
-}
-};
-class hatchback:public car
-{
-public:
-    void get()
+    void display()
     {
-        if(trent==0)
-        {
-        cout<<"INDICA"<<endl<<"I10"<<endl<<"SWIFT";
-        cout<<"Mileage provided by each car is as follows:"<<endl;
-        cout<<"INDICA=16 "<<endl<<"I10= 17"<<endl<<"SWIFT=20";
-        cout<<"The cost details for each car is as follows:"<<endl;
-        cout<<"INNOVA=2800 Rs"<<endl<<"SCORPIO=3000 Rs"<<endl<<"FORTUNER=3500";
-        }
-
-    }
-    void rent()
-    {
-        cout<<"If you want to rent a sedan car Then press Y for yes or N for no"<<endl;
-        if(ch=='n' ||ch=='N')
-        {
-            return;
-        }
-        else
-        {
-            details();
-            cout<<"Press 1 for INDICA,2 for I10,3 for SWIFT"<<endl;
-            cin>>n;
-            cout<<"Enter number of days"<<endl;
-            cin>>days;
-            switch(n)
-            {
-               case 1:
-                if(indica==0)
-                {
-                    cout<<"Sorry Out of Cars,Please go for another car"<<endl;
-                }
-                else
-                {
-                    tcar=7;
-                    trent=days*2800;
-                    indica--;
-                }
-                case 2:
-                if(i10==0)
-                {
-                    cout<<"Sorry Out of Cars,Please go for another car"<<endl;
-                }
-                else
-                {
-                    tcar=8;
-                    trent=days*3000;
-                    i10--;
-                }
-                case 3:
-                if(swift==0)
-                {
-                    cout<<"Sorry Out of Cars,Please go for another car"<<endl;
-                }
-                else
-                {
-                    tcar=9;
-                    trent=days*3500;
-                    swift--;
-                }
-                default:cout<<"Invalid choice"<<endl;
-                break;
-            }
-        }
-    }
-     void display()
-    {
-      cout<<"DETAILS OF HATCHBACK CARS"<<endl;
-      cout<<"INDICA - ";
-      for(int i=1;i<=indica;i++);
-      cout<<i<<endl;
-      cout<<"I10 - ";
-      for(int i=1;i<=i10;i++);
-      cout<<i<<endl;
-      cout<<"SWIFT - ";
-      for(int i=1;i<=swift;i++);
-      cout<<i<<endl;
+        cout<<"DETAILS OF SUV CARS"<<endl;
+        cout<<"INNOVA"<<"\t"<<"SCORPIO"<<"\t"<<"FORTUNER"<<endl<<endl;
+        int i;
+        cout<<"INNOVA - ";
+        for(i=1;i<=innova;i++);
+        cout<<i<<endl;
+        cout<<"SCORPIO - ";
+        for(i=1;i<=scorpio;i++);
+        cout<<i<<endl;
+        cout<<"FORTUNER - ";
+        for(i=1;i<=fortuner;i++);
+        cout<<i<<endl;
     }
 };
+
 class rent:virtual public hatchback,virtual public sedan,virtual public SUV
 {
-public:
-int m;
-void display()
-{
+    public:
+    int m;
+    void display()
+    {
 
-cout<<"Please enter the kind of car u want "<<endl;
-cout<<"1.Hatchback"<<endl<<" 2.Sedan"<<endl<<"3.SUV"<<endl;
-cin>>m;
+        cout<<"Please enter the kind of car u want"<<endl;
+        cout<<"1.Hatchback"<<endl<<"2.Sedan"<<endl<<"3.SUV"<<endl;
+        cin>>m;
 
-switch(m)
-{
-case 1: hatchback::display();
-hatchback::get();
-hatchback::rent();
-break;
-case 2: sedan::display();
-sedan::get();
-sedan::rent();
-break;
-case 3: SUV::display();
-SUV::get();
-SUV::rent();
-break;
-}
-}
+        switch(m)
+        {
+            case 1: hatchback::display();
+            hatchback::get();
+            hatchback::rent();
+            break;
+            case 2: sedan::display();
+            sedan::get();
+            sedan::rent();
+            break;
+            case 3: SUV::display();
+            SUV::get();
+            SUV::rent();
+            break;
+        }
+    }
 
 };
 
