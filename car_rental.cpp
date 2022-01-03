@@ -129,7 +129,7 @@ class sedan:public car
         cout<<endl<<"Mileage provided by each car is as follows:"<<endl;
         cout<<"DZIRE=20 "<<endl<<"VERNA= 11"<<endl<<"INDIGO=15";
         cout<<"The cost details for each car is as follows:"<<endl;
-        cout<<"DZIRE=3800 Rs"<<endl<<"Verna=3000 Rs"<<endl<<"INDIGO=3500";
+        cout<<"DZIRE=3800 Rs"<<endl<<"Verna=3000 Rs"<<endl<<"INDIGO=3500"<<endl;
         }
 
     }
@@ -214,7 +214,7 @@ class SUV:public car
         if(trent==0)
         {
             cout<<endl<<"Mileage provided by each car is as follows:"<<endl;
-            cout<<"INNOVA=11 "<<endl<<"SCORPIO= 15"<<endl<<"FORTUNER=10";
+            cout<<"INNOVA=11 "<<endl<<"SCORPIO= 15"<<endl<<"FORTUNER=10"<<endl;
             cout<<"The cost details for each car is as follows:"<<endl;
             cout<<"INNOVA=4800 Rs"<<endl<<"SCORPIO=5000 Rs"<<endl<<"FORTUNER=4500";
         }
