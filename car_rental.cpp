@@ -328,125 +328,125 @@ class rent:virtual public hatchback,virtual public sedan,virtual public SUV
 
 int main()
 {
-   char ch;
-rent r;
+    char ch;
+    rent r;
 
-cout<<"WELCOME TO CAR RENTAL"<<endl;
-r.display();
-
-
-ofstream file;
-file.open("Customer_details.txt");
-file<<"CAR RENTALS"<<endl;
-file<<"RECEIPT"<<endl;
-file<<"CUSTOMER DETAILS"<<endl;
-file<<"CUSTOMER NAME : "<<fname<<"  "<<lname<<endl<<endl;
-file<<"CONTACT : "<<contact<<endl<<endl;
-file<<" TYPE OF CAR ";
-file<<" DAYS ";
-file<<" COST ";
-file<<" TOTAL"<<endl;;
+    cout<<"WELCOME TO CAR RENTAL"<<endl;
+    r.display();
 
 
-for(;;)
-{
-
-do
-{
-cout<<"\n";
-
-if(tcar==7)
-{
-file<<" INDICA :";
-file<<days;
-file<<"Rs.2800";
-file<<2800*days<<endl;
-}
-
-if(tcar==8)
-{
-file<<" I10 :";
-file<<days;
-file<<"Rs.3000";
-file<<3000*days<<endl;
-}
-
-if(tcar==9)
-{
-file<<" SWIFT :";
-file<<days;
-file<<"Rs.3500";
-file<<3500*days<<endl;
-}
-if(tcar==1)
-{
-file<<" DZIRE :";
-file<<days;
-file<<"Rs.3800";
-file<<3800*days<<"\n\t";
-}
-if(tcar==2)
-{
-file<<" VERNA :";
-file<<days;
-file<<"Rs.3000";
-file<<3000*days<<endl;
-}
-if(tcar==3)
-{
-file<<" INDIGO :";
-file<<days;
-file<<"Rs.3500";
-file<<3500*days<<endl;
-}
-if(tcar==4)
-{
-file<<" INNOVA :";
-file<<days;
-file<<"Rs.4800";
-file<<4800*days<<endl;
-}
-if(tcar==5)
-{
-file<<" SCORPIO :";
-file<<days;
-file<<"Rs.5000";
-file<<4500*days<<endl;
-}
-if(tcar==6)
-{
-file<<" FORTUNER :";
-file<<days;
-file<<"Rs.4500";
-file<<4000*days<<endl;
-}
-
-cout<<"\tDo you want to rent another car? If yes press 'Y' or press 'N' : ";
-cin>>ch;
-if(ch=='n'||ch=='N')
-break;
-
-r.display();
-}while(ch=='y'||ch=='Y');
-file.close();
-
-string linesread;
-   ifstream infile ("Customer_details.txt");
-   if (infile.is_open())
-   {
-while ( getline (infile, linesread) )
-{
-   cout << linesread << endl;
-}
-infile.close();
-   }
-   else cout << "File cannot be read";
+    ofstream file;
+    file.open("Customer_details.txt");
+    file<<"CAR RENTALS"<<endl;
+    file<<"RECEIPT"<<endl;
+    file<<"CUSTOMER DETAILS"<<endl;
+    file<<"CUSTOMER NAME : "<<fname<<"  "<<lname<<endl<<endl;
+    file<<"CONTACT : "<<contact<<endl<<endl;
+    file<<" TYPE OF CAR ";
+    file<<" DAYS ";
+    file<<" COST ";
+    file<<" TOTAL"<<endl;;
 
 
-cout<<"Thank You for visiting"<<endl;
-cout<<"TOTAL RENT : "<<trent<<endl;
-exit(0);
-}
+    for(;;)
+    {
+
+        do
+        {
+            cout<<"\n";
+
+            if(tcar==7)
+            {
+                file<<" INDICA :";
+                file<<days;
+                file<<"Rs.2800";
+                file<<2800*days<<endl;
+            }
+
+            if(tcar==8)
+            {
+                file<<" I10 :";
+                file<<days;
+                file<<"Rs.3000";
+                file<<3000*days<<endl;
+            }
+
+            if(tcar==9)
+            {
+                file<<" SWIFT :";
+                file<<days;
+                file<<"Rs.3500";
+                file<<3500*days<<endl;
+            }
+            if(tcar==1)
+            {
+                file<<" DZIRE :";
+                file<<days;
+                file<<"Rs.3800";
+                file<<3800*days<<"\n\t";
+            }
+            if(tcar==2)
+            {
+                file<<" VERNA :";
+                file<<days;
+                file<<"Rs.3000";
+                file<<3000*days<<endl;
+            }
+            if(tcar==3)
+            {
+                file<<" INDIGO :";
+                file<<days;
+                file<<"Rs.3500";
+                file<<3500*days<<endl;
+            }
+            if(tcar==4)
+            {
+                file<<" INNOVA :";
+                file<<days;
+                file<<"Rs.4800";
+                file<<4800*days<<endl;
+            }
+            if(tcar==5)
+            {
+                file<<" SCORPIO :";
+                file<<days;
+                file<<"Rs.5000";
+                file<<4500*days<<endl;
+            }
+            if(tcar==6)
+            {
+                file<<" FORTUNER :";
+                file<<days;
+                file<<"Rs.4500";
+                file<<4000*days<<endl;
+            }
+
+            cout<<"\tDo you want to rent another car? If yes press 'Y' or press 'N' : ";
+            cin>>ch;
+            if(ch=='n'||ch=='N')
+            break;
+
+            r.display();
+        } while(ch=='y'||ch=='Y');
+        file.close();
+
+        string linesread;
+        ifstream infile ("Customer_details.txt");
+        if (infile.is_open())
+        {
+            while ( getline (infile, linesread) )
+            {
+               cout << linesread << endl;
+            }
+            infile.close();
+        }
+        else cout << "File cannot be read";
+
+
+        cout<<"Thank You for visiting"<<endl;
+        cout<<"TOTAL RENT : "<<trent<<endl;
+        exit(0);
+    }
 
     return 0;
 }
