@@ -244,7 +244,7 @@ public:
             cin>>days;
             switch(n)
             {
-                case 1:
+               case 1:
                 if(indica==0)
                 {
                     cout<<"Sorry Out of Cars,Please go for another car"<<endl;
@@ -283,25 +283,18 @@ public:
         }
     }
      void display()
-{
-cout<<"DETAILS OF HATCHBACK CARS"<<endl;
-
-for(int i=1;i<=indica;i++)
-{
-   cout<<"INDICA"<<endl;
-}
-for(int i=1;i<=i10;i++)
-{
-
-cout<<"I10"<<endl;
-}
-for(int i=1;i<=swift;i++)
-{
-
-cout<<"SWIFT"<<endl;;
-}
-
-}
+    {
+      cout<<"DETAILS OF HATCHBACK CARS"<<endl;
+      cout<<"INDICA - ";
+      for(int i=1;i<=indica;i++);
+      cout<<i<<endl;
+      cout<<"I10 - ";
+      for(int i=1;i<=i10;i++);
+      cout<<i<<endl;
+      cout<<"SWIFT - ";
+      for(int i=1;i<=swift;i++);
+      cout<<i<<endl;
+    }
 };
 class rent:virtual public hatchback,virtual public sedan,virtual public SUV
 {
@@ -311,7 +304,7 @@ void display()
 {
 
 cout<<"Please enter the kind of car u want "<<endl;
-cout<<"1.Hatchback"<<endl<<" 2.Sedan"<<endl<<"3.SUV";
+cout<<"1.Hatchback"<<endl<<" 2.Sedan"<<endl<<"3.SUV"<<endl;
 cin>>m;
 
 switch(m)
