@@ -1,10 +1,21 @@
-CAR RENTALS
-RECEIPT
-CUSTOMER DETAILS
-CUSTOMER NAME : hej  hdj
+			___________________________________________________________________
 
-CONTACT : 67
 
- TYPE OF CAR  DAYS  COST  TOTAL
- INDICA :3Rs.28008400
- INDICA :3Rs.28008400
+			                            CAR RENTALS                            
+
+
+			___________________________________________________________________
+
+
+			                              RECEIPT                              
+
+
+	    CUSTOMER DETAILS
+
+	    CUSTOMER NAME :   
+
+	    CONTACT : 0
+
+
+	    TYPE OF CAR 	    DAYS 	    COST 	    TOTAL(Rs)
+
