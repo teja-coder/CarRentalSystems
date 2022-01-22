@@ -1,3 +1,49 @@
+#ifndef _COLORS_
+
+#define _COLORS_
+
+
+/* FOREGROUND */
+
+#define RST  "\x1B[0m"
+
+#define KRED  "\x1B[31m"
+
+#define KGRN  "\x1B[32m"
+
+#define KYEL  "\x1B[33m"
+
+#define KBLU  "\x1B[34m"
+
+#define KMAG  "\x1B[35m"
+
+#define KCYN  "\x1B[36m"
+
+#define KWHT  "\x1B[37m"
+
+
+#define FRED(x) KRED x RST
+
+#define FGRN(x) KGRN x RST
+
+#define FYEL(x) KYEL x RST
+
+#define FBLU(x) KBLU x RST
+
+#define FMAG(x) KMAG x RST
+
+#define FCYN(x) KCYN x RST
+
+#define FWHT(x) KWHT x RST
+
+
+#define BOLD(x) "\x1B[1m" x RST
+
+#define UNDL(x) "\x1B[4m" x RST
+
+
+#endif  /* _COLORS_ */
+
 #include <bits/stdc++.h>
 #include<fstream>
 using namespace std;
@@ -117,9 +163,9 @@ class hatchback:public car
     void display()
     {
         system("clear");
-        cout<<"\t\t\t___________________________________________________________________\n\n\n";
-        cout<<"\t\t\t                    DETAILS OF HATCHBACK CARS                      \n\n\n";
-        cout<<"\t\t\t___________________________________________________________________\n\n\n";
+        cout<<FYEL("\t\t\t___________________________________________________________________\n\n\n");
+        cout<<FBLU(BOLD("\t\t\t                    DETAILS OF HATCHBACK CARS                      \n\n\n"));
+        cout<<FYEL("\t\t\t___________________________________________________________________\n\n\n");
         cout<<"\t    ";
         cout<<"INDICA"<<"\t"<<"I10"<<"\t"<<"SWIFT"<<endl<<endl;
         int i;
@@ -219,9 +265,9 @@ class sedan:public car
     void display()
     {
         system("clear");
-        cout<<"\t\t\t___________________________________________________________________\n\n\n";
-        cout<<"\t\t\t                    DETAILS OF SEDAN CARS                          \n\n\n";
-        cout<<"\t\t\t___________________________________________________________________\n\n\n";
+        cout<<FYEL("\t\t\t___________________________________________________________________\n\n\n");
+        cout<<FBLU(BOLD("\t\t\t                    DETAILS OF SEDAN CARS                          \n\n\n"));
+        cout<<FYEL("\t\t\t___________________________________________________________________\n\n\n");
         cout<<"\t    ";
         cout<<"DZIRE"<<"\t"<<"VERNA"<<"\t"<<"INDIGO"<<endl<<endl;
         int i;
@@ -322,9 +368,9 @@ class SUV:public car
     void display()
     {
         system("clear");
-        cout<<"\t\t\t___________________________________________________________________\n\n\n";
-        cout<<"\t\t\t                    DETAILS OF SUV CARS                            \n\n\n";
-        cout<<"\t\t\t___________________________________________________________________\n\n\n";
+        cout<<FYEL("\t\t\t___________________________________________________________________\n\n\n");
+        cout<<FBLU(BOLD("\t\t\t                    DETAILS OF SUV CARS                            \n\n\n"));
+        cout<<FYEL("\t\t\t___________________________________________________________________\n\n\n");
         cout<<"\t    ";
         cout<<"INNOVA"<<"\t"<<"SCORPIO"<<"\t"<<"FORTUNER"<<endl<<endl;
         int i;
@@ -381,9 +427,9 @@ void login()
     int loginch,m;
     abc:
     system("clear");
-    cout<<"\t\t\t___________________________________________________________________\n\n\n";
-    cout<<"\t\t\t                            Login Portal                           \n\n\n";
-    cout<<"\t\t\t___________________________________________________________________\n\n\n";
+    cout<<FYEL("\t\t\t___________________________________________________________________\n\n\n");
+    cout<<FBLU(BOLD("\t\t\t                            Login Portal                           \n\n\n"));
+    cout<<FYEL("\t\t\t___________________________________________________________________\n\n\n");
     cout<<"\t\t\t                                                                   \n\n\n";
     cout<<"\t |  Username : ";
     cin>>userid;
@@ -394,9 +440,9 @@ void login()
     if(userid==id && passwd==pass)
     {
         system("clear");
-        cout<<"\t\t\t___________________________________________________________________\n\n\n";
-        cout<<"\t\t\t                            CAR RENTALS                            \n\n\n";
-        cout<<"\t\t\t___________________________________________________________________\n\n\n";
+        cout<<FYEL("\t\t\t___________________________________________________________________\n\n\n");
+        cout<<FBLU(BOLD("\t\t\t                            CAR RENTALS                            \n\n\n"));
+        cout<<FYEL("\t\t\t___________________________________________________________________\n\n\n");
         cout<<endl<<"\t    ";
         cout<<"Update the rents of cars"<<endl;
         cout<<endl<<"\t    "<<"1. Dzire : Rs.";
@@ -471,9 +517,9 @@ int main()
     rent r;
     system("clear");
     cost();
-    cout<<"\t\t\t___________________________________________________________________\n\n\n";
-    cout<<"\t\t\t                            CAR RENTALS                            \n\n\n";
-    cout<<"\t\t\t___________________________________________________________________\n\n\n";
+    cout<<FYEL("\t\t\t___________________________________________________________________\n\n\n");
+    cout<<FBLU(BOLD("\t\t\t                            CAR RENTALS                            \n\n\n"));
+    cout<<FYEL("\t\t\t___________________________________________________________________\n\n\n");
     cout<<"\t    Select Your Role"<<"   ";
     cout<<"1.Customer  2.Admin"<<endl<<endl;
     cout<<"\t    Enter choice : ";
@@ -485,9 +531,9 @@ int main()
 
         ofstream file;
         file.open("Customer_details.txt");
-        file<<"\t\t\t___________________________________________________________________\n\n\n";
-        file<<"\t\t\t                            CAR RENTALS                            \n\n\n";
-        file<<"\t\t\t___________________________________________________________________\n\n\n";
+        file<<FYEL("\t\t\t___________________________________________________________________\n\n\n");
+        file<<FBLU(BOLD("\t\t\t                            CAR RENTALS                            \n\n\n"));
+        file<<FYEL("\t\t\t___________________________________________________________________\n\n\n");
         file<<"\t\t\t                              RECEIPT                              \n\n\n";
         file<<"\t    "<<"CUSTOMER DETAILS"<<endl<<endl;
         file<<"\t    "<<"CUSTOMER NAME : "<<fname<<"  "<<lname<<endl<<endl;
@@ -592,7 +638,7 @@ int main()
             else cout << "\t    "<<"File cannot be read";
 
             cout<<endl<<endl<<"\t    "<<"TOTAL RENT : Rs. "<<trent<<endl;
-            cout<<endl<<endl<<"\t\t\t                   😊 Thank You for visiting 😊           \n\n\n";
+            cout<<endl<<endl<<FYEL("\t\t\t                   😊 Thank You for visiting 😊           \n\n\n");
             cout<<endl<<endl<<endl;
             exit(0);
         }
