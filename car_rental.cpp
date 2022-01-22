@@ -592,7 +592,7 @@ int main()
             else cout << "\t    "<<"File cannot be read";
 
             cout<<endl<<endl<<"\t    "<<"TOTAL RENT : Rs. "<<trent<<endl;
-            cout<<endl<<endl<<"\t\t\t                   🦸‍♂️ Thank You for visiting 🦸‍♂️           \n\n\n";
+            cout<<endl<<endl<<"\t\t\t                   😊 Thank You for visiting 😊           \n\n\n";
             cout<<endl<<endl<<endl;
             exit(0);
         }
