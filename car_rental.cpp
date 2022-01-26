@@ -423,7 +423,7 @@ class rent:virtual public hatchback,virtual public sedan,virtual public SUV
 
 void login()
 {
-    string userid,passwd,id="teja",pass="teja";
+    string userid,passwd,id="admin",pass="admin";
     int loginch,m;
     abc:
     system("clear");
