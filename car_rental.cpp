@@ -50,6 +50,7 @@ using namespace std;
 string fname,lname;
 long int contact;
 int days,tcar=0,trent=0;
+int flag = 0;
 int dzireCost=3800,vernaCost=3000,indigoCost=3500,innovaCost=2800,scorpioCost=3000,fortunerCost=3500,indicaCost=1500,i10Cost=1800,swiftCost=1600;
 class car
 {
@@ -59,17 +60,26 @@ class car
     static int dzire,verna,indigo,innova,scorpio,fortuner,indica,i10,swift;
     void details()
     {
-        cout<<endl<<"\t    "<<"Please Enter the customer details"<<endl<<endl;
-        cout<<"\t    ";
-        cout<<"Enter your First name: ";
-        cin>>fname;
-        cout<<"\t    ";
-        cout<<"Enter your last name: ";
-        cin>>lname;
-        cout<<"\t    ";
-        cout<<"Enter your contact: ";
-        cin>>contact;
-        cout<<endl;
+        if(flag==0)
+        {
+            cout<<endl<<"\t    "<<"Please Enter the customer details"<<endl<<endl;
+            cout<<"\t    ";
+            cout<<"Enter your First name: ";
+            cin>>fname;
+            cout<<"\t    ";
+            cout<<"Enter your last name: ";
+            cin>>lname;
+            cout<<"\t    ";
+            cout<<"Enter your contact: ";
+            cin>>contact;
+            cout<<endl;
+            flag=1;
+        }
+        else
+        {
+            cout<<endl;
+            return;
+        }
     }
 };
 int car::dzire=1;
@@ -124,7 +134,7 @@ class hatchback:public car
                 else
                 {
                     tcar=7;
-                    trent=days*indicaCost;
+                    trent+=days*indicaCost;
                     indica--;
                 }
                 break;
@@ -137,7 +147,7 @@ class hatchback:public car
                 else
                 {
                     tcar=8;
-                    trent=days*i10Cost;
+                    trent+=days*i10Cost;
                     i10--;
                 }
                 break;
@@ -150,7 +160,7 @@ class hatchback:public car
                 else
                 {
                     tcar=9;
-                    trent=days*swiftCost;
+                    trent+=days*swiftCost;
                     swift--;
                 }
                 break;
@@ -226,7 +236,7 @@ class sedan:public car
                 else
                 {
                     tcar=1;
-                    trent=days*dzireCost;
+                    trent+=days*dzireCost;
                     dzire--;
                 }
                 break;
@@ -239,7 +249,7 @@ class sedan:public car
                 else
                 {
                     tcar=2;
-                    trent=days*vernaCost;
+                    trent+=days*vernaCost;
                     verna--;
                 }
                 break;
@@ -252,7 +262,7 @@ class sedan:public car
                 else
                 {
                     tcar=3;
-                    trent=days*indigoCost;
+                    trent+=days*indigoCost;
                     indigo--;
                 }
                 break;
@@ -328,7 +338,7 @@ class SUV:public car
                 else
                 {
                     tcar=4;
-                    trent=days*innovaCost;
+                    trent+=days*innovaCost;
                     innova--;
                 }
                 break;
@@ -341,7 +351,7 @@ class SUV:public car
                 else
                 {
                     tcar=5;
-                    trent=days*scorpioCost;
+                    trent+=days*scorpioCost;
                     scorpio--;
                 }
                 break;
@@ -354,7 +364,7 @@ class SUV:public car
                 else
                 {
                     tcar=6;
-                    trent=days*fortunerCost;
+                    trent+=days*fortunerCost;
                     fortuner--;
                 }
                 break;
