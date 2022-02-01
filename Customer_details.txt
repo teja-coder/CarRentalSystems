@@ -1,25 +1,22 @@
-[33m			___________________________________________________________________
+			___________________________________________________________________
 
 
-[0m[34m[1m			                            CAR RENTALS                            
+			                            CAR RENTALS                            
 
 
-[0m[0m[33m			___________________________________________________________________
+			___________________________________________________________________
 
 
-[0m			                              RECEIPT                              
+			                              RECEIPT                              
 
 
 	    CUSTOMER DETAILS
 
-	    CUSTOMER NAME : rfr  ff
+	    CUSTOMER NAME : john  smith
 
-	    CONTACT : 344
+	    CONTACT : 6474747474
 
 
 	    TYPE OF CAR 	    DAYS 	    COST 	    TOTAL(Rs)
 
-	    INDICA    	    	    4    	    Rs.1500	    6000
-	    SWIFT     	    	    5    	    Rs.1500	    7500
-	    INDIGO    	    	    5    	    Rs.2000	    10000
-	    FORTUNER	    	    5    	    Rs.5000	    25000
+	    INDICA    	    	    2    	    Rs.1500	    3000

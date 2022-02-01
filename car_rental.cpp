@@ -541,9 +541,9 @@ int main()
 
         ofstream file;
         file.open("Customer_details.txt");
-        file<<FYEL("\t\t\t___________________________________________________________________\n\n\n");
-        file<<FBLU(BOLD("\t\t\t                            CAR RENTALS                            \n\n\n"));
-        file<<FYEL("\t\t\t___________________________________________________________________\n\n\n");
+        file<<"\t\t\t___________________________________________________________________\n\n\n";
+        file<<"\t\t\t                            CAR RENTALS                            \n\n\n";
+        file<<"\t\t\t___________________________________________________________________\n\n\n";
         file<<"\t\t\t                              RECEIPT                              \n\n\n";
         file<<"\t    "<<"CUSTOMER DETAILS"<<endl<<endl;
         file<<"\t    "<<"CUSTOMER NAME : "<<fname<<"  "<<lname<<endl<<endl;
