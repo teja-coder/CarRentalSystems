@@ -42,7 +42,7 @@
 #define UNDL(x) "\x1B[4m" x RST
 
 
-#endif  /* _COLORS_ */
+#endif  // _COLORS_ 
 
 #include <bits/stdc++.h>
 #include<fstream>
